@@ -1,0 +1,39 @@
+<%-include('include/_header')-%>
+   <div class="text-center center-div d-flex align-items-center justify-content-center", id="LoginPage">
+      <div class="wrapper text-center center-div align-items-center justify-content-center">
+         <div class="title">
+            Login
+         </div>
+         <% if(err){ %>
+            <h6 class="alert alert-danger" style="margin: 5px;"><%-err%></h6>
+       <% } %>
+        <% if(locals.logout){%>
+            <div class="alter alert-success text-center">
+                <%= logout %>
+            </div>
+           <%}%>
+         <form action="/user-login" method="POST">
+            <div class="field">
+               <input type="text" name="email" required>
+               <label>Email Address</label>
+            </div>
+            <div class="field">
+               <input type="password" name="password" required>
+               <label>Password</label>
+            </div>
+            <div class="content">
+            <br>
+            </div>
+            <div class="field">
+               <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">
+               Not a member? <a href="signup">Signup now</a>
+            </div>
+            <div class="signup-link">
+               <a href="admin-log">Admin Login</a>
+            </div>
+         </form>
+      </div>
+   </div>
+<%-include('include/_footer')-%>

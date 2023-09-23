@@ -1,0 +1,22 @@
+<%-include('include/_header')-%>
+<div class="text-center center-div d-flex align-items-center justify-content-center", id="EditingPage">
+   <div class="wrapper text-center center-div align-items-center justify-content-center">
+      <div class="title-one">
+         User Data
+      </div>
+      <form action="/update/<%-dataone._id%>" method="post" autocomplete="off">
+        <div class="field">
+            <input type="text"  name="name" value="<%-dataone.name%>" required>
+        </div>
+         <div class="field">
+            <input type="text" name="email" value="<%-dataone.email%>" required>
+         </div>
+         <br>
+         <div class="field">
+            <input type="submit" value="Update">
+         </div>
+         <br>
+      </form>
+   </div>
+</div>
+<%-include('include/_footer')-%>
